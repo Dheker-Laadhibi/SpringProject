@@ -91,7 +91,7 @@ private  Claims extractAllClaims(String  token) {
 
     }
 
-public  Boolean validateToken(String token, UserDetails userDetails) {
+public  Boolean isTokenValid(String token, UserDetails userDetails) {
         final String username = this.extractUsername(token);
         return  username.equals(userDetails.getUsername())&& !isTokenExpired(token);
 }
